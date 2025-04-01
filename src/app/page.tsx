@@ -15,7 +15,7 @@ export default function Home() {
 
   return (
     <div className="container mx-auto py-10 px-4">
-      <h1 className="text-3xl font-bold text-blue-900 mb-6">Probleme & Lösungen</h1>
+      <h1 className="text-3xl font-bold mb-6" style={{ color: '#698C23' }}>Probleme & Lösungen</h1>
       {problems.length ? problems.map(problem => (
         <ProblemCard key={problem.id} problem={problem} />
       )) : (

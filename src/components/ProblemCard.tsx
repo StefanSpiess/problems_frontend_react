@@ -9,10 +9,10 @@ interface ProblemCardProps {
 export default function ProblemCard({ problem }: ProblemCardProps) {
   const [open, setOpen] = useState(false);
   return (
-    <div className="border rounded-lg shadow-md mb-4 overflow-hidden border-[#D7D7D7]">
+    <div className="border rounded-lg shadow-md mb-4 overflow-hidden border-[#465E12]">
       <div
         onClick={() => setOpen(!open)}
-        style={{ backgroundColor: '#8CBC23' }}
+        style={{ backgroundColor: '#698D1A' }}
         className="text-white p-4 cursor-pointer flex justify-between items-center"
       >
         <h2 className="font-semibold text-xl">📝 {problem.description}</h2>
