@@ -15,7 +15,7 @@ export default function ProblemCard({ problem }: ProblemCardProps) {
         style={{ backgroundColor: '#698D1A' }}
         className="text-white p-4 cursor-pointer flex justify-between items-center"
       >
-        <h2 className="font-semibold text-xl">📝 {problem.description}</h2>
+        <h2 className="font-semibold text-xl">{problem.id}: {problem.description}</h2>
         <span className="text-xl">{open ? '🔽' : '▶️'}</span>
       </div>
 
@@ -48,14 +48,14 @@ export default function ProblemCard({ problem }: ProblemCardProps) {
 
           {problem.problem_solutions && problem.problem_solutions.length > 0 ? (
             <div className="mt-4 pt-3 border-t border-[#D7D7D7]">
-              <strong className="mb-2 block" style={{ color: '#328E57' }}>🚀 Lösungen:</strong>
+              <strong className="mb-2 block" style={{ color: '#328E57' }}>Lösungsansätze:</strong>
               {problem.problem_solutions.map((solution) => (
                 <SolutionCard key={solution.id} solution={solution} />
               ))}
             </div>
           ) : (
             <div className="mt-4 pt-3 border-t border-[#D7D7D7]">
-              <strong className="mb-2 block" style={{ color: '#328E57' }}>🚀 Lösungen:</strong>
+              <strong className="mb-2 block" style={{ color: '#328E57' }}>Lösungsansätze:</strong>
               <p className="text-sm italic" style={{ color: '#747474' }}>
                 Noch keine Lösungen vorhanden.
               </p>
